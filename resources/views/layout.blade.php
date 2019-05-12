@@ -7,11 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('titulo')</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
         .altura {
             margin-bottom: -5000px;
             padding-bottom: 5000px;
             overflow: hidden; 
+        }
+
+        .teste{
+            background-color: blueviolet;
         }
     </style>
 </head>
@@ -63,13 +68,19 @@
                 </div>
             </nav>
 
-            <main>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
                 @yield('content')
             </main>
 
         </div>
     </div>
     <script src="{{asset('js/app.js')}}"></script>
+
+    <script type="text/javascript">
+        @yield('script')
+    </script>
+    
+    
 </body>
 
 </html>

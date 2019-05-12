@@ -152,5 +152,149 @@
 
 
 @section('content')
-<h1>teste ok!</h1>
+<form id="formFranquia">
+    <div id="FranquiaSession" style="margin-top: 20px;">
+        <h2><b> Dados do cliente</b></h2>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="cnpj">CNPJ</label>
+                <input type="text" class="form-control form-control-sm" id="cnpj" name="cnpj">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="dataAbertura">Data de Abertura</label>
+                <input type="text" class="form-control form-control-sm" id="dataAbertura" name="dataAbertura">
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="nomeFantasia">Nome fantasia</label>
+                <input type="text" class="form-control form-control-sm" id="nomeFantasia" name="nomeFantasia">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="razaoSocial">Razão social</label>
+                <input type="text" class="form-control form-control-sm" id="razaoSocial" name="razaoSocial">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="cnae">CNAE</label>
+                <input type="text" class="form-control form-control-sm" id="cnae" name="cnae">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inscricaoMunicipal">Inscrição municipal</label>
+                <input type="text" class="form-control form-control-sm" id="inscricaoMunicipal">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="inscricaoEstatual">Inscrição estatual</label>
+                <input type="text" class="form-control form-control-sm" id="inscricaoEstatual">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="email">E-mail</label>
+                <input type="text" class="form-control form-control-sm" id="email">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inscricaoMunicipal">Telefone</label>
+                <input type="text" class="form-control form-control-sm" id="telefoneResidencial" max="9">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="telefoneCelular">Celular</label>
+                <input type="text" class="form-control form-control-sm" id="telefoneCelular">
+            </div>
+        </div>
+    </div>
+    <div id="enderecoSession" style="margin-top: 20px;">
+        <h2><b>Endereço</b></h2>
+
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control form-control-sm" id="cep" name="cep">
+            </div>
+            <div class="form-group col-md-8">
+                <label for="logradouro">Logradouro</label>
+                <input type="text" class="form-control form-control-sm" id="logradouro" name="logradouro">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="numero">Número</label>
+                <input type="number" class="form-control form-control-sm" id="numero">
+            </div>
+
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="complemento">Complemento</label>
+                <input type="text" class="form-control form-control-sm" id="complemento">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="bairro">Bairro</label>
+                <input type="text" class="form-control form-control-sm" id="bairro" name="bairro">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="cidade">Município</label>
+                <input type="text" class="form-control form-control-sm" id="cidade" name="cidade">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="estado">UF</label>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>selecione um estado...</option>
+                    <option value="1">Bahia</option>
+                    <option value="2">São Paulo</option>
+                    <option value="3">Rio de Janeiro</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="pais">País</label>
+                <input type="text" class="form-control form-control-sm" id="pais">
+            </div>
+        </div>
+
+
+    </div>
+    <!--
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+        </div>
+        -->
+    <div id="btnPanel" style="margin-top: 20px; align-items: center">
+        <button type="submit" class="btn btn-success" style="">Cadastrar</button>
+        <button type="cancel" class="btn btn-danger"
+            style="color: #fff; background-color: #6c757d; border-color: #6c757d;">Cancelar</button>
+
+    </div>
+    <br>
+    <br>
+</form>
+@endsection
+
+@section('script')
+$.ajaxSetup({
+    headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+console.log('teste ok!');
 @endsection
