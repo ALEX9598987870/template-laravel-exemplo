@@ -12,17 +12,21 @@
         .altura {
             margin-bottom: -5000px;
             padding-bottom: 5000px;
-            overflow: hidden; 
+            overflow: hidden;
         }
 
-        .teste{
+        .teste {
             background-color: blueviolet;
+        }
+
+        body {
+            padding-top: 56px;
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,8 +63,7 @@
             </form>
         </div>
     </nav>
-
-    <div class="container-fluid">
+    <div id="main-content" class="container-fluid">
         <div class="row">
             <nav class="col-md-2 d-none d-md-block bg-dark sidebar altura">
                 <div class="sidebar-sticky">
@@ -79,8 +82,8 @@
     <script type="text/javascript">
         @yield('script')
     </script>
-    
-    
+
+
 </body>
 
 </html>
