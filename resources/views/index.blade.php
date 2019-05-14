@@ -159,7 +159,7 @@
     }
 </style>
 
-<form id="formFranquia" action="#">
+<form id="formFranquia">
     <div id="FranquiaSession" style="margin-top: 20px;">
         <h2><b> Dados do cliente</b></h2>
 
