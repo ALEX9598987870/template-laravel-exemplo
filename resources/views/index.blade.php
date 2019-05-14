@@ -170,47 +170,48 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="dataAbertura">Data de Abertura</label>
-                <input type="text" class="form-control form-control-sm" id="dataAbertura" name="dataAbertura">
+                <input type="text" class="form-control form-control-sm">
             </div>
-
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="nomeFantasia">Nome fantasia</label>
-                <input type="text" class="form-control form-control-sm" id="nomeFantasia" name="nomeFantasia">
+                <label for="nome_fantasia">Nome fantasia</label>
+                <input type="text" class="form-control form-control-sm" id="nome_fantasia" name="nome_fantasia">
             </div>
             <div class="form-group col-md-6">
-                <label for="razaoSocial">Razão social</label>
-                <input type="text" class="form-control form-control-sm" id="razaoSocial" name="razaoSocial">
+                <label for="razao_social">Razão social</label>
+                <input type="text" class="form-control form-control-sm" id="razao_social" name="razao_social">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="cnae">CNAE</label>
                 <input type="text" class="form-control form-control-sm" id="cnae" name="cnae">
             </div>
             <div class="form-group col-md-4">
-                <label for="inscricaoMunicipal">Inscrição municipal</label>
-                <input type="text" class="form-control form-control-sm" id="inscricaoMunicipal">
+                <label for="inscricao_municipal">Inscrição municipal</label>
+                <input type="text" class="form-control form-control-sm" id="inscricao_municipal" name="inscricao_municipal">
             </div>
 
             <div class="form-group col-md-4">
-                <label for="inscricaoEstatual">Inscrição estatual</label>
-                <input type="text" class="form-control form-control-sm" id="inscricaoEstatual">
+                <label for="inscricao_estatual">Inscrição estatual</label>
+                <input type="text" class="form-control form-control-sm" id="inscricao_estatual" name="inscricao_estatual">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="email">E-mail</label>
-                <input type="text" class="form-control form-control-sm" id="email">
+                <input type="text" class="form-control form-control-sm" id="email" name="email">
             </div>
             <div class="form-group col-md-3">
-                <label for="inscricaoMunicipal">Telefone</label>
-                <input type="text" class="form-control form-control-sm" id="telefoneResidencial" max="9">
+                <label for="telefone_residencial">Telefone</label>
+                <input type="text" class="form-control form-control-sm" id="telefone_residencial" name="telefone_residencial" max="9">
             </div>
             <div class="form-group col-md-3">
-                <label for="telefoneCelular">Celular</label>
-                <input type="text" class="form-control form-control-sm" id="telefoneCelular">
+                <label for="telefone_celular">Celular</label>
+                <input type="text" class="form-control form-control-sm" id="telefone_celular" name="telefone_celular">
             </div>
         </div>
     </div>
@@ -228,7 +229,7 @@
             </div>
             <div class="form-group col-md-2">
                 <label for="numero">Número</label>
-                <input type="number" class="form-control form-control-sm" id="numero">
+                <input type="number" class="form-control form-control-sm" id="numero" name="numero">
             </div>
 
         </div>
@@ -236,7 +237,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="complemento">Complemento</label>
-                <input type="text" class="form-control form-control-sm" id="complemento">
+                <input type="text" class="form-control form-control-sm" id="complemento" name="complemento">
             </div>
             <div class="form-group col-md-6">
                 <label for="bairro">Bairro</label>
@@ -252,7 +253,7 @@
 
             <div class="form-group col-md-4">
                 <label for="estado">UF</label>
-                <select class="custom-select" id="inputGroupSelect01">
+                <select class="custom-select" id="inputGroupSelect01" id="estado" name="estado">
                     <option selected>selecione um estado...</option>
                     <option value="1">Bahia</option>
                     <option value="2">São Paulo</option>
@@ -261,7 +262,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="pais">País</label>
-                <input type="text" class="form-control form-control-sm" id="pais">
+                <input type="text" class="form-control form-control-sm" id="pais" name="pais">
             </div>
         </div>
 
