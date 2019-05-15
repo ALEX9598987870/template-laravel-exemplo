@@ -1,3 +1,4 @@
 <?php
 
-Route::get('/', 'ClienteController@create');
+Route::get('/index', 'ClienteController@index');
+Route::post('/index', 'ClienteController@store');

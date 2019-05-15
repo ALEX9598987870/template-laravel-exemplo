@@ -4,41 +4,47 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cliente;
+use App\Endereco;
 
 class ClienteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
         return view('index');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    
+    public function create()
     {
-        //
-        $c = Cliente::create($request->all());
+       
+    }
+    
+    public function store(Request $request){
+
+        $c = new Cliente;
+        $c->cnpj = $request->cnpj;
+        $c->nome_fantasia = $request->nome_fantasia;
+        $c->razao_social = $request->razao_social;
+        $c->cnae = $request->cnae;
+        $c->inscricao_municipal = $request->inscricao_municipal;
+        $c->inscricao_estatual = $request->inscricao_estatual;
+        $c->email = $request->email;
+        $c->telefone_residencial = $request->telefone_residencial;
+        $c->telefone_celular = $request->telefone_celular;
+        
         $c->save();
+        
+        $e = new Endereco;
+        $e->cep = $request->cep;
+        $e->logradouro = $request->logradouro;
+        $e->numero = $request->numero;
+        $e->complemento = $request->complemento;
+        $e->bairro = $request->bairro;
+        $e->municipio = $request->municipio;
+        $e->uf = $request->uf;
+        $e->pais = $request->pais;
+
+        $c->endereco()->save($e);
     }
 
     /**
