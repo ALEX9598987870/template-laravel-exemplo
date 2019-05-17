@@ -8,6 +8,12 @@ use App\Endereco;
 
 class ClienteController extends Controller
 {
+
+    public function lista(){
+        $clientes = Cliente::all();
+        //return $clientes->toJson();
+        return view('listar', compact('clientes'));
+    }
     
     public function index()
     {
